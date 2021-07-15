@@ -20,4 +20,20 @@ public class Cliente {
     public String getNome() {
         return nome;
     }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCartaoCredito(String cartaoCredito) {
+        this.cartaoCredito = cartaoCredito;
+    }
+
+    public String getCartaoCredito() {
+        return cartaoCredito;
+    }
 }
