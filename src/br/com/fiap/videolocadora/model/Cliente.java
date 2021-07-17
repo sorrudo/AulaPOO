@@ -1,17 +1,42 @@
 package br.com.fiap.videolocadora.model;
-
 import java.util.Date;
 
 public class Cliente {
-    public int id;
-    public String nome;
-    public String cpf;
-    public String cartaoCredito;
-    public Date data;
+    private int id;
+    private String nome;
+
+    private String cpf;
+    private String cartaoCredito;
+    private int idade;
+    private Date dataNascimento;
+
+
+    public void setDataNascimento(Date dataNascimento) {
+        this.dataNascimento = dataNascimento;
+    }
+
+    public Date getDataNascimento() {
+        return dataNascimento;
+    }
+
+    public int getIdade() {
+        // Calcular idade
+        // resultado = hoje - dataNascimento = 25
+        return 25;
+    }
+
 
     public void alugar() {
         System.out.println("Aluguel do cliente " + nome + " efetuado com suceesso\n");
     }
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getId() {
+        return id;
+    }
+
 
     public void setNome(String nome) {
         this.nome = nome;
@@ -36,4 +61,22 @@ public class Cliente {
     public String getCartaoCredito() {
         return cartaoCredito;
     }
+
+    public boolean devolver(String filme){
+        // opções de processamentos possiveis para esse método:
+
+        // consultar se filme está mesmo alugado para aquele cliente
+        // verificar se pagamento ja foi efetuado
+        // alterar o status do filme para livre
+        // alterar a conta do cliente para sem débito
+        System.out.println("Devolvendo o Filme "+ filme);
+        return true;
+    }
+
+    public String pegarPrimeiroNumeroCartaoCredito(){
+         cartaoCredito.substring(0, 4);
+        return cartaoCredito;
+    }
+
+
 }
