@@ -1,4 +1,6 @@
 package br.com.fiap.videolocadora.model;
+import br.com.fiap.videolocadora.util.DateUtil;
+
 import java.util.Date;
 
 public class Cliente {
@@ -16,13 +18,13 @@ public class Cliente {
     }
 
     public Date getDataNascimento() {
-        return dataNascimento;
+        return DateUtil.calcularIdade(dataNascimento);
     }
 
-    public int getIdade() {
+    public Date getIdade() {
         // Calcular idade
         // resultado = hoje - dataNascimento = 25
-        return 25;
+        return DateUtil.calcularIdade(dataNascimento);
     }
 
 
